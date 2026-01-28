@@ -219,3 +219,10 @@ if (userRole === "anonymous") {
     start_campaign.style.opacity = '0.3';
 
 }
+
+const details=document.getElementById("details");
+details.addEventListener("click",(e)=>{
+    const campaign = filteredCampaigns[currentIndex];
+    localStorage.setItem("campaign_id",campaign.id);
+    window.location.href ="./campain_details.html";
+})

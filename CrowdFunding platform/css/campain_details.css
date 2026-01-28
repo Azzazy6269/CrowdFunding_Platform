@@ -1,0 +1,155 @@
+:root {
+    --primary: #059669;       
+    --primary-hover: #047857;
+    --secondary: #1e293b;     
+    --bg1: #fdfdfb;     
+    --bg2: #f9fafb;
+    --text-body: #262d37;     
+    --border: #eee;  
+    --input-focus: #d1fae5;  
+    --hashed-words: #2c3e50; 
+    --labels: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--bg1);
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+/* Header */
+header.header_bar {
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header #user_bar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header #user_bar li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#data_container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 40px;
+    padding: 40px 50px;
+    max-width: 1400px;
+}
+
+
+#main_details {
+    flex: 2; 
+    display: flex;
+    flex-direction: column;
+}
+
+#image {
+    width: 100%;
+    max-height: 500px;
+    margin-top: 0; 
+    border-radius: 20px;
+}
+
+#pledges_sidebar {
+    flex: 1; 
+    top: 20px;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+#pledges {
+    width: 100%; 
+    max-width: none; 
+}
+footer {
+    background-color: var(--secondary);
+    color: white;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+footer #left_right{
+    display: flex  ;
+    flex-direction: row;
+    gap : 40%
+}
+
+footer h2 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+footer  ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer  ul li .social_app {
+    font-weight: bold;
+}
+
+footer  ul li .url {
+    color: var(--bg1);
+}
+
+footer  ul li .url:hover {
+    cursor:pointer;
+}
+
+#left li {
+    cursor:pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header.header_bar, footer {
+        padding: 20px;
+    }
+    #data_container {
+        flex-direction: column; 
+    }
+    #pledges_sidebar {
+        width: 100%;
+        position: static;
+    }
+    #image{
+        margin-bottom: 25px;
+        padding-bottom: 0px;
+    }
+}
