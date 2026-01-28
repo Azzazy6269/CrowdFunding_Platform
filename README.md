@@ -7,7 +7,7 @@ State Management: localStorage for cross-page data persistence (e.g., Campaign I
 
 💻 Installation & Setup
 Clone the Repository:
-git clone https://github.com/your-username/your-repo-name.git
+git clone repoLink
 Install Dependencies: Make sure you have Node.js installed, then install JSON Server globally:
 npm install -g json-server
 Run the Backend Server: Navigate to the project folder and start the server on port 3000:
