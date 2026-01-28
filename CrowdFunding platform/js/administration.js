@@ -68,8 +68,8 @@ let currentApprovedIndex = 0;
 let currentWaitingIndex = 0;
 
 const WaitingCampaignsContainer = document.getElementById("campaigns_Waiting");
-const nextBtn_Waiting = document.getElementById("next_Waiting");
-const prevBtn_Waiting = document.getElementById("previous_Waiting");
+const next_Waiting = document.getElementById("next_Waiting");
+const previous_Waiting = document.getElementById("previous_Waiting");
 //Get all campaigns
 async function fetchCampaigns() {
     try {
@@ -136,22 +136,22 @@ function DisplayWaitingCampaign() {
 fetchCampaigns();
 
 // Buttons prev,next /////////////////////////////////
-nextBtn_Waiting.addEventListener("click", () => {
+next_Waiting.addEventListener("click", () => {
     if (currentWaitingIndex < filteredWaitingCampaigns.length - 1) {
         currentWaitingIndex++;
     } else {
         currentWaitingIndex = 0;
     }
-    DisplayCampaign();
+    DisplayWaitingCampaign();
 });
 
-prevBtn_Waiting.addEventListener("click", () => {
+previous_Waiting.addEventListener("click", () => {
     if (currentWaitingIndex > 0) {
         currentWaitingIndex--;
     } else {
         currentWaitingIndex = filteredWaitingCampaigns.length - 1;
     }
-    DisplayCampaign();
+    DisplayWaitingCampaign();
 });
 
 //Approve button //////////////////////////////////
@@ -183,8 +183,8 @@ const Reject = document.getElementById("Reject");
 Reject.addEventListener("click", async (e) => {
     e.preventDefault();
     try {
-        var DisApprovedcampaign = filteredDisApprovedCampaigns[currentDisApprovedIndex];
-        const response = await fetch(`http://localhost:3000/campaigns/${DisApprovedcampaign.id}`, {
+        var Waitingcampaign = filteredWaitingCampaigns[currentWaitingIndex];
+        const response = await fetch(`http://localhost:3000/campaigns/${Waitingcampaign.id}`, {
             method: "delete",
         });
         if (!response.ok) {

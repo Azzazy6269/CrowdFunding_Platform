@@ -33,7 +33,7 @@ campaign_form.addEventListener("submit", async (e) => {
         return;
     }
     if(!validateDescription(description)){
-        alert("maximum characters of description is 500");
+        alert("maximum characters of description is 700");
         return;
     }
     if(!validateGoal(goal)){
@@ -85,7 +85,7 @@ function validateTitle(title){
     return (title.length <= 50);
 }
 function validateDescription(description){
-    return (description.length <= 500);
+    return (description.length <= 700);
 }
 function validateGoal(goal){
     return (isFinite(goal));
