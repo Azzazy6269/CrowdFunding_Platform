@@ -1,0 +1,140 @@
+:root {
+    --primary: #059669;
+    --primary-hover: #047857;
+    --secondary: #1e293b;
+    --bg1: #fdfdfb;
+    --bg2: #f9fafb;
+    --text-body: #475569;
+    --border: #eee;
+    --input-focus: #d1fae5;
+    --hashed-words: #2c3e50;
+    --labels: #444
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg1);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+#container {
+    background-color: var(--bg2);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#logo {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#logo h1 {
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin: 0;
+    color: var(--primary);
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
+    position: relative;
+}
+
+#logo h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+#sign_in,
+#sign_up {
+    flex: 1 1 400px;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--bg2);
+    border: 1px solid var(--border);
+}
+h5 {
+    color: var(--text-body);
+    margin-bottom: 20px;
+    padding-left: 10px;
+    font-weight: 400;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary);
+    padding-left: 10px;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-size: 0.85rem;
+    color: var(--hashed-words);
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--labels);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--secondary);
+    background-color: var(--bg2);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 5px var(--primary-hover);
+}
+
+h5:hover {
+    color: var(--hashed-words);
+    font-weight: 700;
+    cursor: pointer;
+}

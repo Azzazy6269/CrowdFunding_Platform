@@ -1,0 +1,361 @@
+:root {
+    --primary: #059669;       
+    --primary-hover: #047857;
+    --secondary: #1e293b;     
+    --bg1: #fdfdfb;     
+    --bg2: #f9fafb;
+    --text-body: #475569;     
+    --border: #eee;  
+    --input-focus: #d1fae5;  
+    --hashed-words: #2c3e50; 
+    --labels: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--bg1);
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+/* Header */
+header.header_bar {
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header #user_bar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header #user_bar li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* Hero Section */
+#hero {
+    background-color: var(--bg2);
+    padding: 60px 50px;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+#hero p {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-body);
+}
+
+/* Category Bar */
+#category_bar {
+    background-color: var(--bg1);
+    padding: 15px 50px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+#category_bar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#category_bar ul li a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+#category_bar ul li a:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Campaigns Explore */
+#campaigns_Waiting_explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 50px;
+    flex-wrap: wrap;
+}
+
+#campaigns_Waiting_explore button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#campaigns_Waiting_explore input {
+    color: var(--text-body);
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#campaigns_Waiting_explore button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Campaign Cards */
+#campaigns_Waiting {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.card .image{
+    width:40%;
+    height: 500px;
+    overflow: hidden;
+}
+.card .image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card .text {
+    padding: 15px;
+}
+
+.card .title {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.card .brief {
+    font-size: 0.95rem;
+    color: var(--text-body);
+}
+/* User explore*/
+#users_explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 50px;
+    flex-wrap: wrap;
+}
+
+#users_explore button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#users_explore input {
+    color: var(--text-body);
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#users_explore button:hover {
+    background-color: var(--primary-hover);
+}
+#users {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+/* User explore*/
+#pledges_explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 50px;
+    flex-wrap: wrap;
+}
+
+#pledges_explore button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#pledges_explore input {
+    color: var(--text-body);
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#pledges_explore button:hover {
+    background-color: var(--primary-hover);
+}
+#pledges {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+/* Banner */
+#banner {
+    background-color: var(--primary);
+    height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    font-size: 30px;
+    margin: 40px 0;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--secondary);
+    color: white;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+footer #left_right{
+    display: flex  ;
+    flex-direction: row;
+    gap : 40%
+}
+
+footer h2 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+footer  ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer  ul li .social_app {
+    font-weight: bold;
+}
+
+footer  ul li .url {
+    color: var(--bg1);
+}
+
+footer  ul li .url:hover {
+    cursor:pointer;
+}
+
+#left li {
+    cursor:pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header.header_bar, #hero, #category_bar, #campaigns_explore, footer {
+        padding: 20px;
+    }
+
+    #campaigns_Waiting_explore {
+        flex-direction: column;
+    }
+
+    .card{
+        flex-direction: column;
+    }
+    .card .image{
+    width:100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+    #category_bar ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
